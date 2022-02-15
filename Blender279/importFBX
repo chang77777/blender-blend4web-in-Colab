@@ -1,0 +1,3 @@
+import bpy
+
+bpy.ops.import_scene.fbx(filepath="/content/Calibration.fbx")

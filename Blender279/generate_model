@@ -1,0 +1,18 @@
+import bpy
+
+#bpy.ops.import_scene.fbx(filepath="/content/untitled.fbx")
+bpy.ops.wm.open_mainfile(filepath="/content/walking.blend")
+
+bpy.ops.object.select_all(action='DESELECT')
+
+#bpy.data.objects['Cube'].select = True
+
+#bpy.ops.object.delete()
+
+bpy.context.scene.render.engine = 'BLEND4WEB'
+
+bpy.data.objects["Calibration"].b4w_use_default_animation = True
+
+#bpy.ops.b4w.preview()
+
+bpy.ops.export_scene.b4w_html(filepath="/content/walking.html")
