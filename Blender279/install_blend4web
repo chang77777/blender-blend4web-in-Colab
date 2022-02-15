@@ -1,6 +1,6 @@
 import bpy
 
-bpy.ops.wm.addon_install(filepath='/content/blend4web_addon_18_05_0.zip')
+bpy.ops.wm.addon_install(filepath='/content/drive/MyDrive/blender-blend4web-in-Colab/Blender279/blend4web_addon_18_05_0.zip')
 
 bpy.ops.wm.addon_enable(module="blend4web")
 

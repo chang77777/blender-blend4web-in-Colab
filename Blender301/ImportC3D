@@ -1,3 +1,0 @@
-import bpy
-
-bpy.ops.import_anim.c3d(filepath='/content/C3D/W1+T01.c3d')

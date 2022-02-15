@@ -1,9 +1,10 @@
 import bpy
 
-#bpy.ops.import_scene.fbx(filepath="/content/untitled.fbx")
-bpy.ops.wm.open_mainfile(filepath="/content/walking.blend")
+bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-Colab/Blender279/emptyWorld.blend")
+bpy.ops.import_scene.fbx(filepath="/content/processingFolder/C3D.fbx")
 
-bpy.ops.object.select_all(action='DESELECT')
+
+#bpy.ops.object.select_all(action='DESELECT')
 
 #bpy.data.objects['Cube'].select = True
 
@@ -15,4 +16,4 @@ bpy.data.objects["Calibration"].b4w_use_default_animation = True
 
 #bpy.ops.b4w.preview()
 
-bpy.ops.export_scene.b4w_html(filepath="/content/walking.html")
+bpy.ops.export_scene.b4w_html(filepath="/content/processingFolder/C3D.html")

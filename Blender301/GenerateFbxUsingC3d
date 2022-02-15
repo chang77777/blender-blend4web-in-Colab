@@ -1,0 +1,17 @@
+import bpy
+
+bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-Colab/Blender301/Calibration.blend")
+
+bpy.ops.import_anim.c3d(filepath='/content/processingFolder/C3D.c3d')
+
+Cali = bpy.data.objects.get('Calibration')
+
+C3Dobj = bpy.data.objects.get("C3D") 
+
+Cali.select_set(True)
+C3Dobj.select_set(True)
+
+
+bpy.ops.object.make_links_data(type='ANIMATION')
+
+bpy.ops.export_scene.fbx(filepath='/content/processingFolder/C3D.fbx')
