@@ -1,0 +1,7 @@
+import bpy
+
+bpy.ops.preferences.addon_install(overwrite=False, filepath='/content/drive/MyDrive/blender-blend4web-in-Colab/Blender301/master.zip')
+
+bpy.ops.preferences.addon_enable(module="io_anim_c3d-master")
+
+bpy.ops.wm.save_userpref()
