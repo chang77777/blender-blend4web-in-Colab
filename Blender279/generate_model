@@ -10,6 +10,13 @@ bpy.ops.import_scene.fbx(filepath="/content/processingFolder/C3D.fbx")
 
 #bpy.ops.object.delete()
 
+if bpy.data.objects["Calibration"]:
+    bpy.ops.object.select_all(action='DESELECT')
+
+    bpy.data.objects['Calibration'].select = True
+
+    bpy.ops.object.delete()
+
 bpy.context.scene.render.engine = 'BLEND4WEB'
 
 bpy.data.objects["Calibration"].b4w_use_default_animation = True
