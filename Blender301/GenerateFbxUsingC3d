@@ -4,16 +4,20 @@ bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-C
 
 bpy.ops.import_anim.c3d(filepath='/content/processingFolder/C3D.c3d')
 
-Cali = bpy.data.objects.get('Calibration')
+if bpy.data.objects.get("C3D"):
+    bpy.ops.object.select_all(action='DESELECT')
+    bpy.data.objects.get("C3D").select_set(True)
+    bpy.ops.object.delete()
+    bpy.ops.object.select_all(action='DESELECT')
 
-C3Dobj = bpy.data.objects.get("C3D") 
 
-Cali.select_set(True)
-C3Dobj.select_set(True)
+bpy.data.objects.get('Calibration').select_set(True)
+bpy.data.objects.get("C3D").select_set(True)
 bpy.ops.object.make_links_data(type='ANIMATION')
 
 bpy.ops.object.select_all(action='DESELECT')
-C3Dobj.select_set(True)
+bpy.data.objects.get("C3D").select_set(True)
 bpy.ops.object.delete()
+bpy.ops.object.select_all(action='DESELECT')
 
 bpy.ops.export_scene.fbx(filepath='/content/processingFolder/C3D.fbx')
