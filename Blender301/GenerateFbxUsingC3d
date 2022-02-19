@@ -4,7 +4,6 @@ bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-C
 
 bpy.ops.import_anim.c3d(filepath='/content/processingFolder/C3D.c3d')
 
-bpy.data.objects['Camera'].select_set(True)
 
 if bpy.data.objects.get("C3D"):
     bpy.ops.object.select_all(action='DESELECT')
