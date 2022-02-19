@@ -1,21 +1,24 @@
 import bpy
 
-bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-Colab/Blender279/emptyWorld.blend")
+#bpy.ops.wm.open_mainfile(filepath="/content/drive/MyDrive/blender-blend4web-in-Colab/Blender279/emptyWorld.blend")
 bpy.ops.import_scene.fbx(filepath="/content/processingFolder/C3D.fbx")
 
 
-#bpy.ops.object.select_all(action='DESELECT')
-
-#bpy.data.objects['Cube'].select = True
-
-#bpy.ops.object.delete()
-
-if bpy.data.objects["Calibration"]:
+if bpy.data.objects['Cube']:
+    
     bpy.ops.object.select_all(action='DESELECT')
 
-    bpy.data.objects['Calibration'].select = True
+    bpy.data.objects['Cube'].select = True
 
     bpy.ops.object.delete()
+
+#if bpy.data.objects["Calibration"]:
+#    bpy.ops.object.select_all(action='DESELECT')
+
+#    bpy.data.objects['Calibration'].select = True
+
+#    bpy.ops.object.delete()
+    
 
 bpy.context.scene.render.engine = 'BLEND4WEB'
 
